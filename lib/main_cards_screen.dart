@@ -29,11 +29,14 @@ class _CollectionState extends State<Collection> {
                         onTap: (){
                           Navigator.pushNamed(context, '/description', arguments: item);
                         }, //передача аргумента!! чтобы данные передались надр экран
-                        child: CircleAvatar(
-                          radius: 40.0,
-                          backgroundImage: AssetImage(
-                            item.placeImage,
-                          ), //если требует имеджпровайдер -assetImage
+                        child: Hero(
+                          tag: item.placeImage,
+                          child: CircleAvatar(
+                            radius: 40.0,
+                            backgroundImage: AssetImage(
+                              item.placeImage,
+                            ), //если требует имеджпровайдер -assetImage
+                          ),
                         ),
                       ),
                       const SizedBox(

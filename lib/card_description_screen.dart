@@ -16,7 +16,9 @@ class PlaceDescriptionScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.asset(place.placeImage),
+          Hero(
+              tag: place.placeImage,
+              child: Image.asset(place.placeImage)),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Text(
